@@ -1,0 +1,37 @@
+
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "Movie API",
+    "version": "1.0.0",
+    "description": "API for managing movies"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:3000",
+      "description": "Local development server"
+    }
+  ],
+  "tags": [
+    {
+      "name": "Movies",
+      "description": "Movie endpoints"
+    }
+  ],
+  "paths": {
+    "/api/movies": {
+      "get": {
+        "tags": ["Movies"],
+        "summary": "Get all movies",
+        "responses": {
+          "200": {
+            "description": "Movies retrieved successfully"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        }
+      }
+    }
+  }
+}
